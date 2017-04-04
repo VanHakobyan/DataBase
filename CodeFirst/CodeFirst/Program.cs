@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace FirstEF6App
+namespace CodeFirst
 {
     class Program
     {
@@ -14,8 +18,6 @@ namespace FirstEF6App
                     Console.WriteLine("{0}.{1} - {2}", u.Id, u.Name, u.Age);
                 }
             }
-
-
         }
     }
 }

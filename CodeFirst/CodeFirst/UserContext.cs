@@ -1,8 +1,8 @@
-﻿using System.Data.Entity;
-
-namespace FirstEF6App
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+namespace CodeFirst
 {
-
     class UserContext : DbContext
     {
         public UserContext() :
@@ -11,5 +11,4 @@ namespace FirstEF6App
 
         public DbSet<User> Users { get; set; }
     }
-
 }
