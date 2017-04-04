@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace FirstEF6App
+namespace Code_first
 { 
     class UserContext : DbContext
     {
