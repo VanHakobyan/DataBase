@@ -7,8 +7,6 @@ namespace FirstEF6App
         static void Main(string[] args)
         {
            
-
-
         }
     }
 }
