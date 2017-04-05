@@ -6,7 +6,11 @@ namespace FirstEF6App
     {
         static void Main(string[] args)
         {
-           
+            var context = new PersonEntities();
+            foreach (var person in context.Table)
+            {
+                Console.WriteLine($"{person.Id}: {person.Name} - {person.Age}");
+            }
         }
     }
 }
