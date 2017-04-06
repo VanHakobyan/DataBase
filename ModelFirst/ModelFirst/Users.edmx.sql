@@ -2,13 +2,12 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/06/2017 17:34:45
+-- Date Created: 04/06/2017 19:58:47
 -- Generated from EDMX file: C:\Users\Van\Source\Repos\DataBase\ModelFirst\ModelFirst\Users.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [userstoredb];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -17,22 +16,22 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_CorporatinUser]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[UserSet] DROP CONSTRAINT [FK_CorporatinUser];
-GO
 IF OBJECT_ID(N'[dbo].[FK_Admin_inherits_User]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[UserSet_Admin] DROP CONSTRAINT [FK_Admin_inherits_User];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CorporatinUser]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[UserSet] DROP CONSTRAINT [FK_CorporatinUser];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[CorporationSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CorporationSet];
+GO
 IF OBJECT_ID(N'[dbo].[UserSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserSet];
-GO
-IF OBJECT_ID(N'[dbo].[CorporatinSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CorporatinSet];
 GO
 IF OBJECT_ID(N'[dbo].[UserSet_Admin]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserSet_Admin];
@@ -53,8 +52,8 @@ CREATE TABLE [dbo].[UserSet] (
 );
 GO
 
--- Creating table 'CorporatinSet'
-CREATE TABLE [dbo].[CorporatinSet] (
+-- Creating table 'CorporationSet'
+CREATE TABLE [dbo].[CorporationSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL
 );
@@ -77,9 +76,9 @@ ADD CONSTRAINT [PK_UserSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'CorporatinSet'
-ALTER TABLE [dbo].[CorporatinSet]
-ADD CONSTRAINT [PK_CorporatinSet]
+-- Creating primary key on [Id] in table 'CorporationSet'
+ALTER TABLE [dbo].[CorporationSet]
+ADD CONSTRAINT [PK_CorporationSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -97,7 +96,7 @@ GO
 ALTER TABLE [dbo].[UserSet]
 ADD CONSTRAINT [FK_CorporatinUser]
     FOREIGN KEY ([Corporatin_Id])
-    REFERENCES [dbo].[CorporatinSet]
+    REFERENCES [dbo].[CorporationSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
