@@ -26,6 +26,6 @@ namespace ModelFirst
         }
     
         public virtual DbSet<User> UserSet { get; set; }
-        public virtual DbSet<Corporatin> CorporatinSet { get; set; }
+        public virtual DbSet<Corporation> CorporationSet { get; set; }
     }
 }

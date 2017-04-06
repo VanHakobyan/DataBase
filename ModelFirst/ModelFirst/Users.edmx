@@ -75,9 +75,9 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Users" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="UsersContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="UserSet" EntityType="Users.User" />
-          <EntitySet Name="CorporatinSet" EntityType="Users.Corporatin" />
+          <EntitySet Name="CorporationSet" EntityType="Users.Corporation" />
           <AssociationSet Name="CorporatinUser" Association="Users.CorporatinUser">
-            <End Role="Corporatin" EntitySet="CorporatinSet" />
+            <End Role="Corporatin" EntitySet="CorporationSet" />
             <End Role="User" EntitySet="UserSet" />
           </AssociationSet>
         </EntityContainer>
@@ -95,7 +95,7 @@
         <EntityType Name="Admin" BaseType="Users.User">
           <Property Name="Level" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="Corporatin">
+        <EntityType Name="Corporation">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -104,7 +104,7 @@
           <NavigationProperty Name="User" Relationship="Users.CorporatinUser" FromRole="Corporatin" ToRole="User" />
         </EntityType>
         <Association Name="CorporatinUser">
-          <End Type="Users.Corporatin" Role="Corporatin" Multiplicity="1" />
+          <End Type="Users.Corporation" Role="Corporatin" Multiplicity="1" />
           <End Type="Users.User" Role="User" Multiplicity="*" />
         </Association>
       </Schema>
@@ -130,8 +130,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CorporatinSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Users.Corporatin)">
+    <EntitySetMapping Name="CorporationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Users.Corporation)">
         <MappingFragment StoreEntitySet="CorporatinSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />

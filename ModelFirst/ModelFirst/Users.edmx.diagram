@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="Users.User" Width="1.5" PointX="1" PointY="0.625" />
         <EntityTypeShape EntityType="Users.Admin" Width="1.5" PointX="1" PointY="3" />
         <InheritanceConnector EntityType="Users.Admin" />
-        <EntityTypeShape EntityType="Users.Corporatin" Width="1.5" PointX="3.625" PointY="1.875" />
+        <EntityTypeShape EntityType="Users.Corporation" Width="1.5" PointX="3.625" PointY="1.875" />
         <AssociationConnector Association="Users.CorporatinUser" />
       </Diagram>
     </edmx:Diagrams>

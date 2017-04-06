@@ -20,6 +20,6 @@ namespace ModelFirst
         public int Age { get; set; }
         public System.DateTime BirthDate { get; set; }
     
-        public virtual Corporatin Corporatin { get; set; }
+        public virtual Corporation Corporation { get; set; }
     }
 }

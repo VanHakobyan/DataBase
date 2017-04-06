@@ -69,7 +69,7 @@
     <Compile Include="Admin.cs">
       <DependentUpon>Users.tt</DependentUpon>
     </Compile>
-    <Compile Include="Corporatin.cs">
+    <Compile Include="Corporation.cs">
       <DependentUpon>Users.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

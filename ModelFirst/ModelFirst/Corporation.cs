@@ -12,10 +12,10 @@ namespace ModelFirst
     using System;
     using System.Collections.Generic;
     
-    public partial class Corporatin
+    public partial class Corporation
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Corporatin()
+        public Corporation()
         {
             this.User = new HashSet<User>();
         }
