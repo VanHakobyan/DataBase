@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/06/2017 19:58:47
+-- Date Created: 04/06/2017 20:11:11
 -- Generated from EDMX file: C:\Users\Van\Source\Repos\DataBase\ModelFirst\ModelFirst\Users.edmx
 -- --------------------------------------------------
 
@@ -16,22 +16,22 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_Admin_inherits_User]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[UserSet_Admin] DROP CONSTRAINT [FK_Admin_inherits_User];
-GO
 IF OBJECT_ID(N'[dbo].[FK_CorporatinUser]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[UserSet] DROP CONSTRAINT [FK_CorporatinUser];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Admin_inherits_User]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[UserSet_Admin] DROP CONSTRAINT [FK_Admin_inherits_User];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[CorporationSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CorporationSet];
-GO
 IF OBJECT_ID(N'[dbo].[UserSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserSet];
+GO
+IF OBJECT_ID(N'[dbo].[CorporationSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CorporationSet];
 GO
 IF OBJECT_ID(N'[dbo].[UserSet_Admin]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserSet_Admin];
