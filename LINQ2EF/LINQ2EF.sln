@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ2Objects", "LINQ2Objects\LINQ2Objects.csproj", "{1CCDC34A-0660-4B6C-A9E0-728A76DBB3F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ2Object 2", "LINQ2Object 2\LINQ2Object 2.csproj", "{F8F94760-0F84-4C52-BCD5-0D6D9FC648D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1CCDC34A-0660-4B6C-A9E0-728A76DBB3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CCDC34A-0660-4B6C-A9E0-728A76DBB3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CCDC34A-0660-4B6C-A9E0-728A76DBB3F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F94760-0F84-4C52-BCD5-0D6D9FC648D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F94760-0F84-4C52-BCD5-0D6D9FC648D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F94760-0F84-4C52-BCD5-0D6D9FC648D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F94760-0F84-4C52-BCD5-0D6D9FC648D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
