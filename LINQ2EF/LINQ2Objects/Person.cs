@@ -1,0 +1,9 @@
+﻿namespace LINQ2Objects
+{
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+    }
+}
