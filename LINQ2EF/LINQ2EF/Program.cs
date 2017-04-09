@@ -13,10 +13,13 @@ namespace LINQ2EF
             using (var db = new VHmodelContainer())
             {
                 var query = from c in db.CustomerSet
+                            where c.Age < 30
+                            orderby c.Id
                             select c;
+                            
                 foreach (var item in query)
                 {
-                    Console.WriteLine(item.LastName);
+                    Console.WriteLine(item.Id+" : "+item.FirstName+" " + item.LastName+" "+item.Age);
                 }
             }
 
