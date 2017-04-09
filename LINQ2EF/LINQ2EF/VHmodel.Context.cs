@@ -13,10 +13,10 @@ namespace LINQ2EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AWEntities : DbContext
+    public partial class VHmodelContainer : DbContext
     {
-        public AWEntities()
-            : base("name=AWEntities")
+        public VHmodelContainer()
+            : base("name=VHmodelContainer")
         {
         }
     

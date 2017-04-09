@@ -10,13 +10,13 @@ namespace LINQ2EF
     {
         static void Main(string[] args)
         {
-            using (var db = new AWEntities())
+            using (var db = new VHmodelContainer())
             {
                 var query = from c in db.CustomerSet
                             select c;
                 foreach (var item in query)
                 {
-                    Console.WriteLine(item.Name);
+                    Console.WriteLine(item.LastName);
                 }
             }
 
