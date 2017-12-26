@@ -1,9 +1,9 @@
 -------------------------------------------------------------
-select nerker.B_V_ID,ISNULL(sum(nerker.B_VOL),0) from utv srvak 
-left join utB nerker on srvak.V_ID=nerker.B_V_ID 
-and nerker.B_Q_ID in (5,6,9,15,18)
-where V_COLOR='G' 
-group by nerker.B_V_ID
+select V.V_ID,ISNULL(SUM(B.B_VOL),0) as g from utv  as V
+left join utB as B on v.V_ID=b.B_V_ID
+and b.B_Q_ID in (5,6,9,15,18)
+where V.V_COLOR='G'
+group by V.V_ID
 ------------------------------------------------------------------
 create database BaseForV
 create table WorkV
