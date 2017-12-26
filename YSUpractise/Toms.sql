@@ -42,3 +42,11 @@ drop database BaseForWork
  
  --four
  -----------------------------------------------------------
+create procedure addRow @SrvakName nvarchar(35),@color nchar(1)
+as
+begin
+declare @id int
+select @id=(select max(v_id) from utV)+1
+insert  utv values
+(@id,@SrvakName,@color)
+end
