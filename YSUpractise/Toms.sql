@@ -1,9 +1,20 @@
+--one
 -------------------------------------------------------------
 select V.V_ID,ISNULL(SUM(B.B_VOL),0) as g from utv  as V
 left join utB as B on v.V_ID=b.B_V_ID
 and b.B_Q_ID in (5,6,9,15,18)
 where V.V_COLOR='G'
 group by V.V_ID
+
+
+--two
+--------------------------------------------------------------
+select distinct * from Battles B1
+join Battles B2 on B1.date<B2.date
+where not exists (select * from Battles as B3 where B3.date>B1.date and B3.date<B2.date)
+
+
+--three
 ------------------------------------------------------------------
 create database BaseForV
 create table WorkV
