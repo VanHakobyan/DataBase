@@ -16,24 +16,29 @@ where not exists (select * from Battles as B3 where B3.date>B1.date and B3.date<
 
 --three
 ------------------------------------------------------------------
-create database BaseForV
-create table WorkV
-(Id int primary key,
- PDateTime datetime ,
- [owner] char(50) not null)
- 
- Alter table WorkV add Constraint Constr
- unique ([owner])
+create database BaseForWork
+use BaseForWork
+create table WorkReal(
+code int primary key,
+PDate datetime,
+[owner] varchar(50) not null)
 
- insert into WorkV
- values 
- (15265,'2011-10-10','Hakobyan Vanik'),
- (1265,'2011-10-11','Hakobyan Van'),
- (125,'2011-10-12','Hakobyan V.'),
- (15,'2011-10-13','Hakobyan V'),
- (1526,'2011-10-14','Hakobyan')
+alter table WorkReal 
+add constraint inOwner unique ( [owner])
 
- delete from WorkV
- where PDateTime='2011-10-10'
-   
+insert WorkReal
+values 
+(15265,'2011-10-10','Hakobyan Vanik'),
+(1265,'2011-10-11','Hakobyan Van'),
+(125,'2011-10-11','Hakobyan V.'),
+(15,'2011-10-13','Hakobyan V'),
+(1526,'2011-10-14','Hakobyan')
+
+ --select * from WorkReal
+
+delete from WorkReal where PDate ='2011-10-11'
+drop database BaseForWork
  --------------------------------------------------------
+ 
+ --four
+ -----------------------------------------------------------
