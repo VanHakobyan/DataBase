@@ -1,3 +1,5 @@
+CREATE DATABASE QVB
+
 USE [QVB]
 GO
 /****** Object:  Table [dbo].[utB]    Script Date: 20.12.2017 15:09:17 ******/
