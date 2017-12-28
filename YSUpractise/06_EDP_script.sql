@@ -1,5 +1,4 @@
 
-/****** Object:  Database [EDP]    Script Date: 01/04/2011 16:37:40 ******/
 CREATE DATABASE [EDP] ON  PRIMARY 
 ( NAME = N'Emp_Dept_Pro', FILENAME = N'D:\Emp_Dept_Pro.mdf' , SIZE = 2304KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
